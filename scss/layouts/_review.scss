@@ -1,0 +1,49 @@
+.review {
+  text-align: left;
+  padding: 35px 0 20px 0;
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: $gabri;
+    color: $primaryColor;
+    margin-bottom: 30px;
+  }
+  ul {
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    li {
+      text-align: center;
+      a {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+@include custom_max(991px) {
+  .review {
+    padding: 20px 0;
+    h2 {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include custom_max(576px) {
+  .review {
+    h2 {
+      margin-bottom: 15px;
+    }
+    ul {
+      li {
+        a {
+          margin: 8px auto;
+        }
+      }
+    }
+  }
+}

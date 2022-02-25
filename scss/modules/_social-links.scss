@@ -1,0 +1,67 @@
+.facebook{
+	background-color: $facebook;
+	border: 1px solid $facebook;
+	&:hover{
+		i{
+			color: $facebook;
+		}
+	}
+}
+
+
+.twitter{
+	background-color: $twitter;
+	border: 1px solid $twitter;
+	&:hover{
+		i{
+			color: $twitter;
+		}
+	}
+}
+
+
+.google-plus{
+	background-color: $gplus;
+	border: 1px solid $gplus;
+	&:hover{
+		i{
+			color: $gplus;
+		}
+	}
+}
+
+
+.linkedin{
+	&:hover{
+		i{
+			color: $linkedin;
+		}
+	}
+}
+
+
+.skype{
+	&:hover{
+		i{
+			color: $skype;
+		}
+	}
+}
+
+
+.youtube{
+	&:hover{
+		i{
+			color: $youtube;
+		}
+	}
+}
+
+
+.instagram{
+	&:hover{
+		i{
+			color: $instagram;
+		}
+	}
+}

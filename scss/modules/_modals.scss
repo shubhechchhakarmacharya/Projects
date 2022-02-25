@@ -1,0 +1,65 @@
+.tap-modal {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9999;
+    border: none;
+    background-color: transparent;
+    display: none;
+    @include custom_max(767px) {
+        display: block;
+    }
+    i {
+        transform: rotate(90deg);
+        font-size: 20px;
+        color: #fff;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        border-radius: 100%;
+        background-color: $primaryColor;
+        text-align: center;
+    }
+}
+
+.mobile-tap-modal {
+    .modal-dialog {
+        top: 50%;
+        transform: translateY(-50%) !important;
+        padding-bottom: 40px;
+    }
+    .modal-header {
+        background-color: $primaryColor;
+        .modal-title {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+            font-family: $roboto;
+        }
+        .close {
+            color: #fff;
+            opacity: 0.8;
+            font-size: 18px;
+        }
+    }
+    .modal-body {
+        padding: 7px 15px;
+        li {
+            margin: 5px 0;
+            color: $black;
+            font-size: 16px;
+            a {
+                color: $black;
+            }
+        }
+    }
+    .modal-footer {
+        padding: 7px 15px;
+        button {
+            background-color: $primaryColor;
+            color: #fff;
+            padding: 5px 12px;
+            font-size: 14px;
+        }
+    }
+}

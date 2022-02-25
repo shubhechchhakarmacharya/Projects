@@ -1,0 +1,27 @@
+@import "base/variables";
+@import "base/mixins";
+@import "modules/typography";
+@import "modules/buttons";
+@import "modules/components";
+@import "modules/modals";
+@import "modules/social-links";
+@import "modules/breadcrumb";
+@import "modules/pagination";
+//Index Section Style
+@import "layouts/header";
+@import "layouts/banner";
+@import "layouts/features";
+@import "layouts/about";
+@import "layouts/services";
+@import "layouts/portfolio";
+@import "layouts/gallery";
+@import "layouts/testimonials";
+@import "layouts/areas";
+@import "layouts/review";
+@import "layouts/call-to-action";
+@import "layouts/footer";
+//Pages
+@import "layouts/page-about";
+@import "layouts/page-services";
+@import "layouts/page-contact";
+@import "layouts/thanks";

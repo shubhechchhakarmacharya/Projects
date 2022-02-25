@@ -1,0 +1,100 @@
+.page-services {
+    .service-block {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        box-shadow: none;
+        margin: 0 0 60px 0;
+        // height: 100%;
+        .figure {
+            flex: 0 0 calc(100% / 2 - 20px);
+            min-height: 100%;
+            margin: 0 10px;
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        .block-content {
+            flex: 0 0 calc(100% / 2 - 20px);
+            margin: 0 10px;
+            h4 {
+                font-size: 26px;
+                color: $primaryColor;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+                padding-bottom: 20px;
+            }
+            p {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@include custom_max(1199px) {
+    .page-services {
+        .service-block {
+            align-items: center;
+            .figure {
+                flex: 0 0 calc(40% - 20px);
+                margin: 0 10px;
+            }
+            .block-content {
+                flex: 0 0 calc(60% - 20px);
+                margin: 0 10px;
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@include custom_max(992px) {
+    .page-services {
+        .service-block {
+            flex-direction: column;
+            margin-bottom: 40px;
+            .figure {
+                flex: 0 0 calc(100%);
+                margin: 0 0 20px 0;
+            }
+            .block-content {
+                flex: 0 0 calc(100%);
+                margin: 0;
+                text-align: center;
+                h4 {
+                    padding: 10px 0;
+                }
+                p {
+                    margin-bottom: 5px;
+                }
+            }
+            &.rev-block {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+@include custom_max(576px) {
+    .page-services {
+        .service-block {
+            margin-bottom: 30px;
+            .block-content {
+                h4 {
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 13px;
+                }
+            }
+            &.rev-block {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}

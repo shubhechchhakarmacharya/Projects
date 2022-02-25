@@ -1,0 +1,28 @@
+.pagination-block {
+    margin-top: 30px;
+    .pagination {
+        justify-content: center;
+        .page-item {
+            .page-link {
+                color: $black;
+                i {
+                    margin: 0 5px;
+                    font-size: 11px;
+                }
+            }
+            &.disabled {
+                .page-link {
+                    color: $t-color;
+                    cursor: not-allowed;
+                }
+            }
+            &.active {
+                .page-link {
+                    background-color: $blue;
+                    border-color: $blue;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

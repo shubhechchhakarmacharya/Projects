@@ -1,0 +1,119 @@
+.page-gallery {
+    .inner-page {
+        padding-bottom: 0;
+    }
+}
+
+.gallery-section {
+    padding-top: 0;
+}
+
+.gallery-filter {
+    .wrap-up {
+        width: 100%;
+    }
+    .galleryFilter {
+        text-align: center;
+        margin-bottom: 30px;
+        a {
+            margin-right: 6px;
+            color: #666;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            padding: 4px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            &.current {
+                background: $dred;
+                border: 1px solid $dred;
+                color: #f9f9f9;
+            }
+        }
+    }
+    .galleryContainer {
+        width: 100%;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        div,
+        img {
+            flex: 0 0 calc(100% / 4);
+            width: 100%;
+            margin: -0.5px;
+        }
+        div {
+            width: calc(100% / 4);
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    .isotope-item {
+        z-index: 2;
+    }
+    .isotope-hidden.isotope-item {
+        pointer-events: none;
+        z-index: 1;
+    }
+    .isotope,
+    .isotope .isotope-item {
+        /* change duration value to whatever you like */
+        -webkit-transition-duration: 0.8s;
+        -moz-transition-duration: 0.8s;
+        transition-duration: 0.8s;
+    }
+    .isotope {
+        -webkit-transition-property: height, width;
+        -moz-transition-property: height, width;
+        transition-property: height, width;
+    }
+    .isotope .isotope-item {
+        -webkit-transition-property: -webkit-transform, opacity;
+        -moz-transition-property: -moz-transform, opacity;
+        transition-property: transform, opacity;
+    }
+}
+
+@include custom_max(767px) {
+    .gallery-filter {
+        .galleryContainer {
+            div,
+            img {
+                flex: 0 0 calc(100% / 4);
+            }
+            div {
+                width: calc(100% / 4);
+            }
+        }
+    }
+}
+
+@include custom_max(576px) {
+    .gallery-filter {
+        .galleryContainer {
+            div,
+            img {
+                flex: 0 0 calc(100% / 2);
+            }
+            div {
+                width: calc(100% / 2);
+            }
+        }
+    }
+}
+
+@include custom_max(480px) {
+    .gallery-filter {
+        .galleryContainer {
+            div,
+            img {
+                flex: 0 0 calc(100% / 2);
+            }
+            div {
+                width: calc(100% / 2);
+            }
+        }
+    }
+}
