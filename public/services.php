@@ -1,3 +1,4 @@
+<?php include 'includes/home/header.php'; ?>
 <div class="page page-services">
     <div class="breadcrumb-block">
         <div class="container">
@@ -136,3 +137,4 @@
         <?php include './includes/home/services.php'; ?>
     </div>
 </div>
+<?php include 'includes/home/footer.php'; ?>

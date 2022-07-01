@@ -1,3 +1,4 @@
+<?php include 'includes/home/header.php'; ?>
 <div class="thanks section">	
     <div class="icon">
         <i class="far fa-check-circle"></i>
@@ -12,3 +13,4 @@
         </div>
     </div>
 </div>
+<?php include 'includes/home/footer.php'; ?>
