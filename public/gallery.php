@@ -1,3 +1,4 @@
+<?php include 'includes/home/header.php'; ?>
 <div class="page page-gallery">
     <div class="breadcrumb-block">
         <div class="container">
@@ -60,3 +61,4 @@
         </div>
     </div>
 </div>
+<?php include 'includes/home/footer.php'; ?>
