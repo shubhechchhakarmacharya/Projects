@@ -1,3 +1,4 @@
+<?php $page='thanks';?>
 <?php include 'includes/home/header.php'; ?>
 <div class="thanks section">	
     <div class="icon">

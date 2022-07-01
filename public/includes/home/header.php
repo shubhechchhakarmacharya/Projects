@@ -1,13 +1,3 @@
-<?php
-    
-    $page = (isset($_GET['id'])) ? $_GET['id'] : 'home';
-    if(!in_array($page, array('home','about','services','contact','gallery','thanks')))
-    {
-    include("404.php");
-    exit;
-    }
-?>
-
 <!doctype html>
 <html lang="en">
 

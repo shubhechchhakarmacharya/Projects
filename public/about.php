@@ -1,3 +1,4 @@
+<?php $page='about'?>
 <?php include 'includes/home/header.php'; ?>
 <div class="page page-about">
     <div class="breadcrumb-block">

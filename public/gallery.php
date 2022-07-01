@@ -1,3 +1,5 @@
+<?php $page='gallery';?>
+
 <?php include 'includes/home/header.php'; ?>
 <div class="page page-gallery">
     <div class="breadcrumb-block">

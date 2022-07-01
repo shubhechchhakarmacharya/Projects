@@ -1,3 +1,4 @@
+<?php $page='services';?>
 <?php include 'includes/home/header.php'; ?>
 <div class="page page-services">
     <div class="breadcrumb-block">

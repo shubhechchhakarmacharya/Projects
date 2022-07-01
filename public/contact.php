@@ -1,3 +1,4 @@
+<?php $page='contact';?>
 <?php include 'includes/home/header.php'; ?>
 <div class="page page-contact">
     <div class="breadcrumb-block">
