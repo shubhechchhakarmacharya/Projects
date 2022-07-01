@@ -1,4 +1,5 @@
 
+<?php $page='index';?>
 <?php include 'includes/home/header.php'; ?>
 
 
