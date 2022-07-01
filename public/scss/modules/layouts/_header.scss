@@ -1,0 +1,125 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  box-shadow: 0 1px 7px 1px #bebebe;
+  background: #fff;
+  transition: 0.4s all;
+  .info-wrapper {
+    background-color: rgba($blue, 0.7);
+    transition: 0.4s all;
+  }
+  .navbar {
+    padding: 0;
+    &.navbar-expand-lg {
+      justify-content: space-between;
+    }
+    .navbar-brand {
+      padding: 5px 0;
+      figure {
+        max-width: 128px;
+        img {
+          &:hover {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+    &-collapse {
+      flex-grow: initial;
+      transition: 0.4s all;
+      .navbar-nav {
+        align-items: center;
+        margin-top: 0;
+        align-items: center;
+        width: 100%;
+        .nav-link {
+          margin: 0 15px;
+          font-size: 14px;
+          font-family: $mont;
+          font-weight: 400;
+          color: $black;
+          text-transform: capitalize;
+          letter-spacing: 0.1em;
+          position: relative;
+        }
+        .nav-item {
+          &:last-child {
+            .nav-link {
+              margin-right: 0;
+            }
+          }
+          &.active {
+            .nav-link {
+              border-bottom: 1px solid #fff;
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include custom_max(1199px) {
+  header {
+    .navbar {
+      &-collapse {
+        .navbar-nav {
+          .nav-link {
+            margin: 0 12px;
+            font-size: 14px;
+          }
+          .nav-item {
+            &.phone {
+              padding: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include custom_max(991px) {
+  header {
+    .navbar {
+      padding: 10px 0;
+      .navbar-brand {
+        figure {
+        }
+      }
+      .navbar-toggler {
+        border: 1px solid $t-color;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@include custom_max(480px) {
+  .top-header {
+    ul {
+      &.social-info {
+        display: none;
+      }
+      &.info {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        li {
+          margin-right: 8px;
+        }
+        i {
+          margin-right: 4px;
+        }
+        li,
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

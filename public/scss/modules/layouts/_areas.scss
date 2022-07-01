@@ -1,0 +1,50 @@
+.areas {
+  margin: 50px 0;
+  .section-header {
+    padding-top: 0;
+  }
+  .list {
+    flex-wrap: wrap;
+    li {
+      flex: 0 0 33.333%;
+      font-size: 16px;
+      color: $t-color;
+      line-height: 1.5;
+      padding: 0 20px;
+      margin: 8px 0;
+      position: relative;
+      &::before {
+        content: "\f054";
+        position: absolute;
+        top: 3px;
+        left: 0;
+        font-size: 12px;
+        color: $t-color;
+        font-family: "fontAwesome";
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+@include custom_max(767px) {
+  .areas {
+    margin-bottom: 30px;
+    .list {
+      li {
+        flex: 0 0 50%;
+      }
+    }
+  }
+}
+
+@include custom_max(576px) {
+  .areas {
+    .list {
+      li {
+        font-size: 13px;
+        margin: 4px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.call-to-action {
+  padding: 40px 0;
+  background: url("../images/action-bg.jpg") center 100% / contain;
+  background-attachment: fixed;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($primaryColor, 0.85);
+  }
+  h3 {
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.3;
+    position: relative;
+    text-align: center;
+  }
+}
+
+@include custom_max(991px) {
+  .call-to-action {
+    h3 {
+      font-size: 18px;
+    }
+  }
+}
+
+@include custom_max(767px) {
+  .call-to-action {
+    h3 {
+      span {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,254 @@
+footer {
+  background-color: #151515;
+  padding: 50px 0 35px 0;
+  .footer-block {
+    .logo {
+      margin-top: -20px;
+      margin-bottom: 10px;
+      img {
+        max-width: 60px;
+      }
+    }
+    .about {
+      p {
+        font-size: 14px;
+        color: #fff;
+        padding-right: 30px;
+      }
+      strong {
+        font-size: 16px;
+        display: block;
+      }
+    }
+    .footer-title {
+      margin-bottom: 20px;
+      position: relative;
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        padding: 0;
+      }
+    }
+    .links {
+      h5 {
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+      li {
+        margin: 10px 0;
+        a {
+          font-size: 14px;
+          color: #fff;
+          margin: 8px 0;
+          padding: 3px 0;
+        }
+        i {
+          margin-right: 8px;
+        }
+        .info {
+          font-size: 14px;
+          color: #fff;
+        }
+        a,
+        .info:hover {
+          color: #fff;
+        }
+      }
+      &.menu {
+        li {
+          a {
+            position: relative;
+            color: #fff;
+            &::before {
+              content: "\f054";
+              font-size: 12px;
+              margin-right: 10px;
+              font-family: "fontAwesome";
+            }
+          }
+        }
+      }
+      .links {
+        margin-top: 15px;
+        display: flex;
+        li {
+          margin: 0;
+          &:first-child {
+            a {
+              margin-left: 0;
+            }
+          }
+        }
+        a {
+          margin: 0 7px;
+          color: #fff;
+        }
+      }
+    }
+    .list {
+      flex-wrap: wrap;
+      li {
+        flex: 0 0 calc(50% - 30px);
+        margin: 0 15px 15px 0;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  background-color: $black;
+  padding: 8px 0;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .block {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    margin: 10px 0 3px 0;
+    line-height: 1.7;
+    a {
+      display: inline;
+      margin: 0 5px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+    }
+  }
+  .develop {
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    line-height: 1.7;
+    .p-divider {
+      margin: 0 15px 0 10px;
+    }
+    a {
+      margin: 0 5px;
+      color: #fff;
+      font-weight: 500;
+      font-family: $mont;
+    }
+  }
+}
+
+@include custom_max(991px) {
+  footer {
+    background-color: #151515;
+    padding: 50px 0 35px 0;
+    .footer-block {
+      .about {
+        p {
+          padding-right: 15px;
+        }
+      }
+      .links {
+        h5 {
+          font-size: 14px;
+        }
+        &.information {
+          li {
+            .info {
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include custom_max(767px) {
+  footer {
+    padding: 35px 0 20px 0;
+    .footer-block {
+      text-align: center;
+      .about {
+        p {
+          padding: 10px;
+          margin-bottom: 20px;
+        }
+      }
+      .footer-title {
+        margin-bottom: 15px;
+        margin-top: 20px;
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          margin: 5px auto;
+          height: 2px;
+          width: 40px;
+          background-color: #fff;
+        }
+      }
+      .links {
+        &.menu {
+          li {
+            a {
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+        .links {
+          justify-content: center;
+        }
+      }
+      .list {
+        justify-content: center;
+        li {
+          flex: 0 0 calc(25% - 30px);
+          margin: 0 8px 8px 0;
+          @include custom_max(480px) {
+            flex: 0 0 calc(50% - 30px);
+            margin: 0 15px 15px 0;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    .wrapper {
+      flex-direction: column;
+      &.w-100 {
+        ul {
+          li {
+            a {
+              margin: 0 7px;
+            }
+          }
+        }
+      }
+    }
+    .block {
+      white-space: nowrap;
+    }
+    .develop {
+      text-align: center;
+      flex-direction: column;
+      .text-center {
+        white-space: nowrap;
+      }
+      a {
+        display: block;
+      }
+      .p-divider {
+        display: none;
+      }
+    }
+  }
+}

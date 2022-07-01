@@ -1,0 +1,212 @@
+.banner {
+  .container {
+    position: relative;
+    &::after {
+      content: "ABN: 60 638 830 209";
+      position: absolute;
+      top: 5px;
+      right: 0;
+      height: 25px;
+      width: 150px;
+      white-space: nowrap;
+      background-color: $dred;
+      color: #fff;
+      font-family: $mont;
+      font-size: 12px;
+      text-align: center;
+      line-height: 25px;
+      z-index: 9;
+    }
+  }
+  .slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 83px;
+    .welcome-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      h1 {
+        font-weight: 400;
+        font-size: 32px;
+        font-family: $mont;
+        line-height: 48px;
+        letter-spacing: 1.3px;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        font-family: $mont;
+        line-height: 28px;
+        letter-spacing: 0.53px;
+        color: #fff;
+        margin-bottom: 35px;
+      }
+      .dark-btn {
+        border: 1px solid #fff;
+        margin: 0 auto;
+        .show-btn,
+        .hide-btn {
+          position: absolute;
+          top: 0px;
+          cursor: pointer;
+          -webkit-transition: all 0.3s ease 0s;
+          -moz-transition: all 0.3s ease 0s;
+          -o-transition: all 0.3s ease 0s;
+          transition: all 0.3s ease 0s;
+          height: 45px;
+          line-height: 45px;
+          text-align: center;
+          font-weight: 700;
+          font-size: 12px;
+          letter-spacing: 1.35px;
+        }
+        .show-btn {
+          left: 0px;
+          width: 195px;
+          color: #fff;
+        }
+        .hide-btn {
+          left: 195px;
+          width: 195px;
+          color: $primaryColor;
+          background: #fff;
+        }
+        &:hover {
+          .show-btn {
+            left: -195px;
+          }
+          .hide-btn {
+            left: 0;
+          }
+        }
+      }
+    }
+    .owl-carousel {
+      position: relative;
+      z-index: 2;
+      .item {
+        .img {
+          width: 100%;
+          height: auto;
+          max-height: calc(100vh - 85px);
+          overflow: hidden;
+          position: relative;
+          margin-bottom: 20px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(#000, 0.6);
+          }
+        }
+      }
+      .owl-dots {
+        display: none;
+      }
+      .owl-nav {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        //padding: 10px;
+        button {
+          font-size: 40px;
+          color: #000;
+          padding: 5px 7px !important;
+          background-color: #fff;
+          line-height: 1;
+          transition: 0.4s all;
+          span {
+            margin-top: -4px;
+            display: block;
+          }
+          &:hover {
+            background-color: $primaryColor;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include custom_max(991px) {
+  .banner {
+    .slider-wrapper {
+      margin-top: 89px;
+      .welcome-text {
+        h1 {
+          font-size: 24px;
+          line-height: 32px;
+          margin-bottom: 15px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 22px;
+          margin-bottom: 20px;
+        }
+      }
+      .owl-carousel {
+        .item {
+          .img {
+            min-height: 350px;
+            max-height: calc(100vh - 89px);
+          }
+        }
+        .owl-nav {
+          button {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include custom_max(767px) {
+  .banner {
+    .slider-wrapper {
+      margin-top: 89px;
+      .welcome-text {
+        width: 100%;
+        h1 {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        p {
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
+      .owl-carousel {
+        .item {
+          .img {
+            img {
+              height: 400px;
+              width: auto;
+              max-width: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include custom_max(576px) {
+}
