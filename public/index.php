@@ -1,5 +1,5 @@
 
-<?php $page='index';?>
+<?php $page='home';?>
 <?php include 'includes/home/header.php'; ?>
 
 
